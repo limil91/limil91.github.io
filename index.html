@@ -7,8 +7,6 @@
     <title>임채일과 박은혜의 결혼식</title>
     <meta content="임채일과 박은혜의 결혼식에 와서 축하해주세요!" name="description" />
     <meta property="og:image" content="images/pic2.jpeg">
-    <meta property="fb:app_id" content="781066922265598" />
-    <meta property="fb:admins" content="Choi.Anderson" />
     <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
     <link href="images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
@@ -53,31 +51,31 @@
             return result;
         }
 
-        //$(document).ready(function () {
+        $(document).ready(function () {
 
-        //    function getText(){
-        //        var result = null;
-        //        $.ajax( { url: "https://raw.githubusercontent.com/AndersonChoi/wedding-card/master/README.md",
-        //                type: 'get',
-        //                dataType: 'html',
-        //                async: false,
-        //                success: function(data) { result = data; }
-        //            }
-        //        );
-        //        FileReady = true;
-        //        return result;
-        //    }
-        //    var markdown_source = getText();
-        //    var comment_contents = markdown_source.split("축하의 말")[1];
+            function getText(){
+                var result = null;
+                $.ajax( { url: "https://limil91.github.io/README.md",
+                        type: 'get',
+                        dataType: 'html',
+                        async: false,
+                        success: function(data) { result = data; }
+                    }
+                );
+                FileReady = true;
+                return result;
+            }
+            var markdown_source = getText();
+            var comment_contents = markdown_source.split("축하의 말")[1];
 
-        //    var md = new Remarkable();
-        //    $("#comments").append(md.render(comment_contents));
+            var md = new Remarkable();
+            $("#comments").append(md.render(comment_contents));
 
 
-        //    if(findGetParameter('gift')=='false'){
-        //        $('#gifts').hide();
-        //    }
-        //});</script>
+            if(findGetParameter('gift')=='false'){
+                $('#gifts').hide();
+            }
+        });</script>
 </head>
 
 <body id="top">
@@ -266,9 +264,9 @@
                             <br>
                             <div class="row">
                                 <div class="col text-center">
-                                    <!--<form action="javascrit:alert('다른분에게 예약된 선물입니다.');">-->
-                                    <button class="btn btn-primary btn-submit" onclick="alert('준비중.');" type="submit">메시지 남기러 가기</button>
-                                    <!--</form>-->
+                                    <form action="https://limil91.github.io/README.md">
+                                        <button class="btn btn-primary btn-submit" type="submit">메시지 남기러 가기</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
